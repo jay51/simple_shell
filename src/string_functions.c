@@ -9,30 +9,26 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int count, i;
-	char *dest;
+    unsigned int count, i;
+    char *dest;
 
-	if (str == NULL)
-		return (NULL);
+    if (str == NULL)
+        return (NULL);
 
-	for (count = 0; str[count] != '\0'; count++)
-	{
-		;
-	}
+    for (count = 0; str[count] != '\0'; count++) {}
 
-	dest = malloc((sizeof(char) * count) + 1);
+    dest = malloc((sizeof(char) * count) + 1);
 
-	if (dest == NULL)
-		return (NULL);
+    if (dest == NULL)
+        return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		dest[i] = str[i];
-	}
+    for (i = 0; str[i] != '\0'; i++) {
+        dest[i] = str[i];
+    }
 
-	dest[i] = '\0';
+    dest[i] = '\0';
 
-	return (dest);
+    return (dest);
 }
 
 /**
@@ -45,20 +41,16 @@ char *_strdup(char *str)
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, j;
+    int i, j;
 
-	for (i = 0; dest[i] != '\0'; i++)
-	{
-		;
-	}
-	for (j = 0; src[j] != '\0'; i++, j++)
-	{
-		dest[i] = src[j];
-	}
+    for (i = 0; dest[i] != '\0'; i++) {}
+    for (j = 0; src[j] != '\0'; i++, j++) {
+            dest[i] = src[j];
+    }
 
-	dest[i] = '\0';
+    dest[i] = '\0';
 
-	return (dest);
+    return (dest);
 }
 
 /**
@@ -87,26 +79,26 @@ char *_strcat66(char *dest, char *src)
 
 	return (dest);
 }
+
 /**
  * _strcmp - main function
  * @s1: first stirng
  * @s2: second string
  * Return: -, or 0
  */
-int _strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2) {
 
-{
+    int a;
 
-	int a;
+    for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++) {
+        if (s1[a] != s2[a]) {
+            return (s1[a] - s2[a]);
+        }
+    }
 
-	for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++)
-
-		if (s1[a] != s2[a])
-		{
-			return (s1[a] - s2[a]);
-		}
-	return (0);
+    return 0;
 }
+
 /**
  *_strlen - finds the length of a string
  *
@@ -116,14 +108,13 @@ int _strcmp(char *s1, char *s2)
  */
 int _strlen(char *s)
 {
-	int length;
+    int length;
 
-	while (*s != '\0')
-	{
-		length++;
-		s++;
-	}
+    while (*s != '\0') {
+        length++;
+        s++;
+    }
 
-	return (length);
+    return (length);
 }
 
